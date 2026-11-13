@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="/Project-3-To-Do_List/Favicon.png" type="image/x-icon">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Sign Up Form</h2>
+        <form action="" id="signUpForm">
+            <div class="eachLineOfForm">
+                <label for="fullName" class="labelForInput">Full Name:</label>
+                <div class="formSecondPortion">
+                    <input type="text" name="fullName" id="fullName" class="inputField" required>
+                    <p class="inputFieldPlaceHolder">Enter your Full Name</p>
+                </div>
+            </div>
+            <div class="eachLineOfForm">
+                <label for="userName" class="labelForInput">User Name:</label>
+                <div class="formSecondPortion">
+                    <input type="text" name="userName" id="userName" class="inputField" required>
+                    <p class="inputFieldPlaceHolder">Enter your User Name</p>
+                </div>
+            </div>
+            <div class="eachLineOfForm">
+                <label for="eMail" class="labelForInput">Email:</label>
+                <div class="formSecondPortion">
+                    <input type="text" name="eMail" id="eMail" class="inputField" required>
+                    <p class="inputFieldPlaceHolder">name@example.com</p>
+                </div>
+                <svg width="30" height="30" viewBox="0 0 24 24" class="tickSVG elementHide">
+                    <path fill="#00ff00" d="M19.8,10.4c0.1,0.5,0.2,1.1,0.2,1.6c0,4.4-3.6,8-8,8s-8-3.6-8-8s3.6-8,8-8c1.6,0,3.2,0.5,4.4,1.3l1.4-1.4 C16.2,2.7,14.2,2,12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10c0-1.1-0.2-2.2-0.5-3.2L19.8,10.4z"></path><path fill="#00ff00" d="M11 16.4L6.3 11.7 7.7 10.3 11 13.6 21.3 3.3 22.7 4.7z"></path>
+                </svg>
+            </div>
+            <p id="eMailPara" class="infoPara hideWithHeightZero">Please provide a valid email address</p>
+            <div class="eachLineOfForm">
+                <label for="passWord" class="labelForInput">Enter Password:</label>
+                <div class="formSecondPortion">
+                    <input type="text" name="passWord" id="passWord" class="inputField" required>
+                    <p class="inputFieldPlaceHolder">Password</p>
+                </div>
+                <svg width="30" height="30" viewBox="0 0 24 24" class="tickSVG elementHide">
+                    <path fill="#00ff00" d="M19.8,10.4c0.1,0.5,0.2,1.1,0.2,1.6c0,4.4-3.6,8-8,8s-8-3.6-8-8s3.6-8,8-8c1.6,0,3.2,0.5,4.4,1.3l1.4-1.4 C16.2,2.7,14.2,2,12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10c0-1.1-0.2-2.2-0.5-3.2L19.8,10.4z"></path><path fill="#00ff00" d="M11 16.4L6.3 11.7 7.7 10.3 11 13.6 21.3 3.3 22.7 4.7z"></path>
+                </svg>
+                <button type="button" class="passWordShowHideBtn">
+                    <svg viewBox="0 0 122.88 68.18"><path fill="white" d="M61.44,13.81a20.31,20.31,0,1,1-14.34,6,20.24,20.24,0,0,1,14.34-6ZM1.05,31.31A106.72,106.72,0,0,1,11.37,20.43C25.74,7.35,42.08.36,59,0s34.09,5.92,50.35,19.32a121.91,121.91,0,0,1,12.54,12,4,4,0,0,1,.25,5,79.88,79.88,0,0,1-15.38,16.41A69.53,69.53,0,0,1,63.43,68.18,76,76,0,0,1,19.17,53.82,89.35,89.35,0,0,1,.86,36.44a3.94,3.94,0,0,1,.19-5.13Zm15.63-5A99.4,99.4,0,0,0,9.09,34,80.86,80.86,0,0,0,23.71,47.37,68.26,68.26,0,0,0,63.4,60.3a61.69,61.69,0,0,0,38.41-13.72,70.84,70.84,0,0,0,12-12.3,110.45,110.45,0,0,0-9.5-8.86C89.56,13.26,74.08,7.58,59.11,7.89S29.63,14.48,16.68,26.27Zm39.69-7.79a7.87,7.87,0,1,1-7.87,7.87,7.86,7.86,0,0,1,7.87-7.87Z"/></svg>
+                    <div class="eyeClosingBar eyeOpen"></div>
+                </button>
+            </div>
+            <p id="PassWordPara" class="infoPara hideWithHeightZero">Must be at least 8 characters long and include 1 number</p>
+            <div id="passWordStrength" class="hideWithHeightZero">
+                <p>Password strength:</p>
+                <div id="strength1" class="strengthIndicatorBoxes"></div>
+                <div id="strength2" class="strengthIndicatorBoxes"></div>
+                <div id="strength3" class="strengthIndicatorBoxes"></div>
+                <div id="strength4" class="strengthIndicatorBoxes"></div>
+            </div>
+            <div class="eachLineOfForm">
+                <label for="confirmPassWord" class="labelForInput">Confirm Password:</label>
+                <div class="formSecondPortion">
+                    <input type="text" name="confirmPassWord" id="confirmPassWord" class="inputField" required>
+                    <p class="inputFieldPlaceHolder">Repeat Password</p>
+                </div>
+                <svg id="conFirmPassSVG" width="30" height="30" viewBox="0 0 24 24" class="tickSVG elementHide">
+                    <path fill="#00ff00" d="M19.8,10.4c0.1,0.5,0.2,1.1,0.2,1.6c0,4.4-3.6,8-8,8s-8-3.6-8-8s3.6-8,8-8c1.6,0,3.2,0.5,4.4,1.3l1.4-1.4 C16.2,2.7,14.2,2,12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10c0-1.1-0.2-2.2-0.5-3.2L19.8,10.4z"></path><path fill="#00ff00" d="M11 16.4L6.3 11.7 7.7 10.3 11 13.6 21.3 3.3 22.7 4.7z"></path>
+                </svg>
+                <button type="button" class="passWordShowHideBtn">
+                    <svg viewBox="0 0 122.88 68.18"><path fill="white" d="M61.44,13.81a20.31,20.31,0,1,1-14.34,6,20.24,20.24,0,0,1,14.34-6ZM1.05,31.31A106.72,106.72,0,0,1,11.37,20.43C25.74,7.35,42.08.36,59,0s34.09,5.92,50.35,19.32a121.91,121.91,0,0,1,12.54,12,4,4,0,0,1,.25,5,79.88,79.88,0,0,1-15.38,16.41A69.53,69.53,0,0,1,63.43,68.18,76,76,0,0,1,19.17,53.82,89.35,89.35,0,0,1,.86,36.44a3.94,3.94,0,0,1,.19-5.13Zm15.63-5A99.4,99.4,0,0,0,9.09,34,80.86,80.86,0,0,0,23.71,47.37,68.26,68.26,0,0,0,63.4,60.3a61.69,61.69,0,0,0,38.41-13.72,70.84,70.84,0,0,0,12-12.3,110.45,110.45,0,0,0-9.5-8.86C89.56,13.26,74.08,7.58,59.11,7.89S29.63,14.48,16.68,26.27Zm39.69-7.79a7.87,7.87,0,1,1-7.87,7.87,7.86,7.86,0,0,1,7.87-7.87Z"/></svg>
+                    <div class="eyeClosingBar eyeOpen"></div>
+                </button>
+            </div>
+            <p id="conFirmPassPara" class="infoPara hideWithHeightZero">Passwords don't match</p>
+            <button type="submit" id="signUpBtn">Sign Up</button>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+</html>
